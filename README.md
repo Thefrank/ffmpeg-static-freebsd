@@ -2,7 +2,11 @@
 static linked build of FFMPEG for FreeBSD
 
 patches from: https://www.freshports.org/multimedia/ffmpeg/
+
 patches from components also from ports tree where needed
+
+build hints from: https://github.com/zimbatm/ffmpeg-static
+
 
 built with:
 
