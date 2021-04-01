@@ -1,34 +1,41 @@
-# ffmpeg-static-freebsd
-static linked build of FFMPEG for FreeBSD
+# Statically Linked FFMPEG for FreeBSD
 
-patches from: https://www.freshports.org/multimedia/ffmpeg/
+Patches are made from [these](https://www.freshports.org/multimedia/ffmpeg/)
 
-patches from components also from ports tree where needed
+Build hints from [here](https://github.com/zimbatm/ffmpeg-static) and [here](https://github.com/markus-perl/ffmpeg-build-script)
 
-build hints from: https://github.com/zimbatm/ffmpeg-static
+# WHY?! Statically Linking is generally a Bad Idea(tm)!
+node packages *REALLY* like statically linked FFMPEG so here we are
 
+## Build settings and library versions
+--disable-ffplay --enable-gpl --enable-libfreetype --enable-libx264 --enable-libx265 --enable-libass --enable-libmp3lame --enable-libopus --enable-libvpx --enable-libsoxr --enable-libvidstab --enable-libopenjpeg --enable-libzimg --enable-libwebp --enable-libvorbis --enable-libspeex --enable-libxvid --enable-libvmaf --enable-libzmq --enable-libaom --enable-libzvbi --enable-libdav1d --enable-libsnappy --enable-libmodplug --enable-libtheora --enable-libtwolame --enable-libmysofa --enable-libbluray --enable-libgme --enable-libgsm --enable-librubberband --enable-fontconfig --enable-runtime-cpudetect  --enable-version3 --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 
 
-built with:
+other libraries:
 
---enable-gpl --enable-libfreetype --enable-libx264 --enable-libx265 --enable-libass --enable-libmp3lame --enable-libopus --enable-libvpx --enable-libsoxr --enable-libvidstab --enable-libopenjpeg --enable-libzimg --enable-libwebp --enable-libvorbis --enable-libspeex --enable-libxvid --enable-libvmaf --enable-libzmq --enable-libaom --enable-libzvbi --enable-libdav1d --enable-libsnappy --enable-libmodplug --enable-libtheora --enable-libtwolame --enable-libmysofa --enable-libbluray --enable-version3 --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264
+| library | version |
+| --- | --- |
+| libavutil   |   56. 72.100 / 56. 72.100 |
+| libavcodec   |  58.135.100 / 58.135.100
+| libavformat   | 58. 77.100 / 58. 77.100
+| libavdevice   | 58. 14.100 / 58. 14.100
+| libavfilter   |  7.111.100 /  7.111.100
+| libswscale    |  5. 10.100 /  5. 10.100
+| libswresample |  3. 10.100 /  3. 10.100
+| libpostproc   | 55. 10.100 / 55. 10.100
 
-not included but common in other static builds:
---enable-fontconfig  --enable-librubberband  --enable-libgsm --enable-gme
+# Updates
 
-other libs:
+This binary requires a large number of patches and rebuilds of components to function so it will lag behind any other FFMPEG-static binaries by quite a bit. If you want updates please **OPEN A TICKET** but keep in mind this is a rather low priority to me.
 
-libavutil      56. 72.100 / 56. 72.100
+# TODO
 
-libavcodec     58.135.100 / 58.135.100
+ - Make this less painful to build
+ 
+# Bugs
 
-libavformat    58. 77.100 / 58. 77.100
+ - It passes FATE but that does not mean it actually works
 
-libavdevice    58. 14.100 / 58. 14.100
+# License(s)
 
-libavfilter     7.111.100 /  7.111.100
+ - FFMPEG and components fall under GPLv3 AFAIK 
 
-libswscale      5. 10.100 /  5. 10.100
-
-libswresample   3. 10.100 /  3. 10.100
-
-libpostproc    55. 10.100 / 55. 10.100
