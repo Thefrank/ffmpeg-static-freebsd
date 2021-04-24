@@ -7,21 +7,21 @@ Build hints from [here](https://github.com/zimbatm/ffmpeg-static) and [here](htt
 # WHY?! Statically Linking is generally a Bad Idea(tm)!
 node packages *REALLY* like statically linked FFMPEG so here we are
 
-## Build settings and library versions
---disable-ffplay --enable-gpl --enable-libfreetype --enable-libx264 --enable-libx265 --enable-libass --enable-libmp3lame --enable-libopus --enable-libvpx --enable-libsoxr --enable-libvidstab --enable-libopenjpeg --enable-libzimg --enable-libwebp --enable-libvorbis --enable-libspeex --enable-libxvid --enable-libvmaf --enable-libzmq --enable-libaom --enable-libzvbi --enable-libdav1d --enable-libsnappy --enable-libmodplug --enable-libtheora --enable-libtwolame --enable-libmysofa --enable-libbluray --enable-libgme --enable-libgsm --enable-librubberband --enable-fontconfig --enable-runtime-cpudetect  --enable-version3 --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 
+## Build settings and library versions (4.4)
+--enable-static --disable-shared --disable-ffplay --enable-gpl --enable-libfreetype --enable-libx264 --enable-libx265 --enable-libass --enable-libmp3lame --enable-libopus --enable-libvpx --enable-libsoxr --enable-libvidstab --enable-libopenjpeg --enable-libzimg --enable-libwebp --enable-libvorbis --enable-libspeex --enable-libxvid --enable-libvmaf --enable-libzmq --enable-libaom --enable-libzvbi --enable-libdav1d --enable-libsnappy --enable-libmodplug --enable-libtheora --enable-libtwolame --enable-libmysofa --enable-libbluray --enable-libgme --enable-libgsm --enable-librubberband --enable-fontconfig --enable-runtime-cpudetect  --enable-version3 --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 
 
 other libraries:
 
 | library | version |
 | --- | --- |
-| libavutil   |   56. 72.100 / 56. 72.100 |
-| libavcodec   |  58.135.100 / 58.135.100
-| libavformat   | 58. 77.100 / 58. 77.100
-| libavdevice   | 58. 14.100 / 58. 14.100
-| libavfilter   |  7.111.100 /  7.111.100
-| libswscale    |  5. 10.100 /  5. 10.100
-| libswresample |  3. 10.100 /  3. 10.100
-| libpostproc   | 55. 10.100 / 55. 10.100
+| libavutil   |   56. 70.100 / 56. 70.100 |
+| libavcodec   |  58.134.100 / 58.134.100
+| libavformat   | 58. 76.100 / 58. 76.100
+| libavdevice   | 58. 13.100 / 58. 13.100
+| libavfilter   |  7.110.100 /  7.110.100
+| libswscale    |  5.  9.100 /  5.  9.100
+| libswresample |  5.  9.100 /  5.  9.100
+| libpostproc   | 55.  9.100 / 55.  9.100
 
 # Updates
 
