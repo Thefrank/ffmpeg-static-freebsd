@@ -7,7 +7,7 @@ Build hints from [here](https://github.com/zimbatm/ffmpeg-static) and [here](htt
 # WHY?! Statically Linking is generally a Bad Idea(tm)!
 node packages *REALLY* like statically linked FFMPEG so here we are
 
-## Build settings and library versions (4.4)
+## Build settings and library versions (4.4.1)
 --enable-static --disable-shared --disable-ffplay --enable-gpl --enable-libfreetype --enable-libx264 --enable-libx265 --enable-libass --enable-libmp3lame --enable-libopus --enable-libvpx --enable-libsoxr --enable-libvidstab --enable-libopenjpeg --enable-libzimg --enable-libwebp --enable-libvorbis --enable-libspeex --enable-libxvid --enable-libvmaf --enable-libzmq --enable-libaom --enable-libzvbi --enable-libdav1d --enable-libsnappy --enable-libmodplug --enable-libtheora --enable-libtwolame --enable-libmysofa --enable-libbluray --enable-libgme --enable-libgsm --enable-librubberband --enable-fontconfig --enable-runtime-cpudetect  --enable-version3 --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 
 
 other libraries:
@@ -22,6 +22,9 @@ other libraries:
 | libswscale    |  5.  9.100 /  5.  9.100
 | libswresample |  5.  9.100 /  5.  9.100
 | libpostproc   | 55.  9.100 / 55.  9.100
+
+not used:
+--enable-libvo-amrwbenc (very old, opencore likely better)
 
 # Updates
 
