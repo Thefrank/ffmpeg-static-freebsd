@@ -1,0 +1,52 @@
+## Build settings and library versions (6.1) (FreeBSD 13.1 AMD64)
+
+| library | version |
+| --- | --- |
+| libavutil   |   58. 29.100 / 58. 29.100 |
+| libavcodec  |   60. 31.102 / 60. 31.102
+| libavformat  |  60. 16.100 / 60. 16.100
+| libavdevice  |  60.  3.100 / 60.  3.100
+| libavfilter  |   9. 12.100 /  9. 12.100
+| libswscale   |   7.  5.100 /  7.  5.100
+| libswresample |  4. 12.100 /  4. 12.100
+| libpostproc  |  57.  3.100 / 57.  3.100
+  
+ configuration: --enable-gpl --enable-gmp --enable-gnutls --enable-libdav1d --enable-libsvtav1 --enable-librav1e --enable-libvmaf --enable-libx264 --enable-chromaprint --enable-libx265 --enable-libvpx --enable-libxvid --enable-libvidstab --enable-libaom --enable-libzimg --enable-libmodplug --enable-libsoxr --enable-libmysofa --enable-lv2 --enable-libopencore_amrnb --enable-libopencore_amrwb --enable-libmp3lame --enable-libopus --enable-libvorbis --enable-libtwolame --enable-libspeex --enable-lv2 --enable-libtheora --enable-librubberband --enable-libgme --enable-libwebp --enable-libzmq --enable-libfribidi --enable-libfontconfig --enable-libfreetype --enable-libass --enable-runtime-cpudetect --cc=cc --cxx=cpp --disable-ffplay --disable-debug --disable-doc --disable-shared --enable-pthreads --enable-static --enable-small --enable-version3 --extra-cflags='-static -I/usr/home/azureagent/vsts/_work/1/s/FFmpeg/workspace/include -I/usr/home/azureagent/vsts/_work/1/s/FFmpeg/workspace/include/lilv-0 -I/usr/home/azureagent/vsts/_work/1/s/FFmpeg/workspace/include/lilv-0' --extra-cxxflags='-static -static-libstdc++' --extra-ldexeflags= --extra-ldflags=-L/usr/home/azureagent/vsts/_work/1/s/FFmpeg/workspace/lib --extra-libs='-static -lc++ -ldl -lpthread -lm -lmd -lz -lfftw3' --pkgconfigdir=/usr/home/azureagent/vsts/_work/1/s/FFmpeg/workspace/lib/pkgconfig --pkg-config-flags=--static --prefix=/usr/home/azureagent/vsts/_work/1/s/FFmpeg/workspace/done/ --extra-version=6.1
+
+Test failures (if any):
+```
+--- ./tests/ref/fate/source	2023-11-10 17:25:17.000000000 -0700
++++ tests/data/fate/source	2023-12-10 17:13:46.283400314 -0700
+@@ -1,30 +1,4 @@
+ Files without standard license headers:
+-libavcodec/file_open.c
+-libavcodec/ilbcdata.h
+-libavcodec/ilbcdec.c
+-libavcodec/interplayacm.c
+-libavcodec/log2_tab.c
+-libavcodec/reverse.c
+-libavdevice/file_open.c
+-libavdevice/reverse.c
+-libavfilter/af_arnndn.c
+-libavfilter/file_open.c
+-libavfilter/log2_tab.c
+-libavformat/file_open.c
+-libavformat/golomb_tab.c
+-libavformat/log2_tab.c
+-libavformat/rangecoder_dec.c
+-libswresample/log2_tab.c
+-libswscale/log2_tab.c
+-tools/uncoded_frame.c
+-tools/yuvcmp.c
+ Headers without standard inclusion guards:
+-compat/djgpp/math.h
+-compat/float/float.h
+-compat/float/limits.h
+-libavcodec/bitstream_template.h
+-libavcodec/vulkan_video_codec_av1std.h
+-libavcodec/vulkan_video_codec_av1std_decode.h
+-tools/decode_simple.h
+ Use of av_clip() where av_clip_uintp2() could be used:
+ Use of av_clip() where av_clip_intp2() could be used:
+Test source failed. Look at tests/data/fate/source.err for details.
+```
