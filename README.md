@@ -6,7 +6,6 @@ Build hints from [here](https://github.com/zimbatm/ffmpeg-static) and [here](htt
 
 ## Why? Statically Linking is generally a Bad Idea(tm)!
 Yes, but node packages *really* like statically linked FFmpeg and FreeBSD is pretty decent with symbol versioning so we can have this.
-There is no FFmpeg 5+ on FreeBSD ports right now either
 
 ## Updates
 
@@ -15,13 +14,13 @@ If you want updates please **OPEN A TICKET** but keep in mind this is a rather l
 
 ## TODO
 
- - Make this less painful to build if possible
- - Add support for HW accel
+ - ~Add support for HW accel~ Not possible?
  
 ## Bugs
 
  - 5.1 passes FATE
  - 5.1.1 has test failures
+ - 7.0 lacks `libbluray` because of [this](https://code.videolan.org/videolan/libbluray/-/issues/43)
  - Please see X.X.X_buildconf.md for more details
 
 ## License(s)
