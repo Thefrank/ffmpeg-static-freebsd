@@ -20,7 +20,7 @@ If you want updates please **OPEN A TICKET** but keep in mind this is a rather l
 
  - 5.1 passes FATE
  - 5.1.1 has test failures
- - 7.0 lacks `libbluray` because of [this](https://code.videolan.org/videolan/libbluray/-/issues/43)
+ - 7.X lacks `libbluray` because of [this](https://code.videolan.org/videolan/libbluray/-/issues/43)
  - Please see X.X.X_buildconf.md for more details
 
 ## License(s)
